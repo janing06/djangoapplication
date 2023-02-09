@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from rembg import remove
 
 
 def home(request):
