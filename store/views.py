@@ -16,27 +16,6 @@ def store(request):
 
     return render(request, 'store/store.html',context)
 
-def removal(request):
-
-    if request.method == 'POST' and request.FILES['upload']:
-        upload = request.FILES['upload']
-        fss = FileSystemStorage()
-        file = fss.save(upload.name, upload)
-
-        input_path = fss.path(file)
-        output_path = 'static/images/output.png'
-
-        input = Image.open(input_path)
-        output = remove(input)
-        output.save(output_path)
-        
-        file_url = fss.url('static/images/output.png')
-        os.remove(fss.path(file))
-        
-        return render(request, 'store/store.html', {'file_url': file_url})
-
-    return render(request,'store/store.html',{})
-
 def cart(request):
 
     context = {}
