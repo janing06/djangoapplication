@@ -2,12 +2,17 @@
 
 {% block content %}
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <style>
-    
 input[type=file]::file-selector-button {
+
   background-color: #ff8800;
+
+}
+.hide{
+    display: none;
 }
 
 </style>
@@ -17,6 +22,7 @@ input[type=file]::file-selector-button {
             <h1 style="margin-bottom: 3%; text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;color: rgb(246, 246, 246);">Background Removal</h1>
 
             <div class="col-sm-4">
+
             </div>
             <div class="col-sm-4 text-center">
                 
@@ -25,8 +31,8 @@ input[type=file]::file-selector-button {
 
                     <input class="form-control" required type="file" id="fileInput" name="upload" accept="image/*">
                     <br>
-                    <button class="mybutton btn btn-primary my-2 btn-lg" type="button">
-
+                    <button class="mybutton btn btn-primary my-2 btn-lg" type="onsubmit">
+                        <i class="loading fa fa-spinner fa-spin hide"></i>
                         <span id="btn-text">Remove Background</span>
                     </button>
 

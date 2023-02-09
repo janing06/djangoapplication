@@ -1,8 +1,5 @@
 from django.shortcuts import render
-from rembg import remove
-from PIL import Image
-import os
-from django.core.files.storage import FileSystemStorage
+
 
 def home(request):
 
